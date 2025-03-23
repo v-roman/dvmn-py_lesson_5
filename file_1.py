@@ -49,18 +49,18 @@ for i in range(10):
         third_skill = third_skill.replace(old, new)
     fake = Faker("ru_RU")
     context = {
-  "first_name": fake.first_name(),
-  "last_name": fake.last_name(),
-  "town": fake.city(),
-  "job": fake.job(),
-  "strength": random.randint(3, 18),
-  "agility": random.randint(3, 18),
-  "endurance": random.randint(3, 18),
-  "intelligence": random.randint(3, 18),
-  "luck": random.randint(3, 18),
-  "skill_1": first_skill,
-  "skill_2": second_skill,
-  "skill_3": third_skill,
+    "first_name": fake.first_name(),
+    "last_name": fake.last_name(),
+    "town": fake.city(),
+    "job": fake.job(),
+    "strength": random.randint(3, 18),
+    "agility": random.randint(3, 18),
+    "endurance": random.randint(3, 18),
+    "intelligence": random.randint(3, 18),
+    "luck": random.randint(3, 18),
+    "skill_1": first_skill,
+    "skill_2": second_skill,
+    "skill_3": third_skill,
     }
     file_name = os.path.join(result, "form_{}.svg".format(i + 1))
     file_operations.render_template("template.svg", file_name, context)
